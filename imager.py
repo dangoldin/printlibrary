@@ -57,8 +57,40 @@ class imager:
         for r, row in enumerate(imgs):
             cur_w = 0
             max_height += row_dims[r][1]
+            row_width = row_dims[r][0]
+            diff = tot_width - row_width
+            items_in_row = len(row)
+            if items_in_row > 1:
+                spacer = diff/(items_in_row-1)
+            else:
+                spacer = (diff - row_width)/2
+            print 'Row',r,'Spacer',spacer
             for c, im in enumerate(row):
                 img.paste(im, (cur_w, max_height - im.size[1]) )
-                cur_w += im.size[0]
+                cur_w += im.size[0] + spacer
 
         img.save(outfile)
+
+    def calculateNumRows(self):
+        num = len(self.imgs)
+        #w = math.pow(num/1.6, 0.5)
+        #w = math.pow(num, 0.5)
+        #h = int( math.ceil(num/w) )
+
+        divisors = self.divisors(num)
+        l = len(divisors)
+        if l > 0:
+            h = divisors[l/2]
+        else:
+            h = int(math.sqrt(num))
+
+        return h
+
+    def divisors(self, num):
+        d = []
+        for i in range(2,int(math.sqrt(num))+1):
+            if num % i == 0:
+                d.extend([i, num/i])
+        d.sort()
+
+        return d

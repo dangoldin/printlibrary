@@ -28,7 +28,7 @@ class amzn:
 
         items = dom.getElementsByTagName('Item')
 
-        filenames = []
+        res = []
         for item in items:
             #print item.toprettyxml()
             titles = item.getElementsByTagName('Title')
@@ -37,29 +37,41 @@ class amzn:
 
             dims = item.getElementsByTagName('ItemDimensions')
             height = length = width = weight = 0
-            if dims is not None and len(dims) > 0:
-                dims = dims[0]
-                height = dims.getElementsByTagName('Height')[0].childNodes[0].nodeValue
-                length = dims.getElementsByTagName('Length')[0].childNodes[0].nodeValue
-                width  = dims.getElementsByTagName('Width')[0].childNodes[0].nodeValue
+            #if dims is not None and len(dims) > 0:
+                #dims = dims[0]
+                #height = dims.getElementsByTagName('Height')[0].childNodes[0].nodeValue
+                #length = dims.getElementsByTagName('Length')[0].childNodes[0].nodeValue
+                #width  = dims.getElementsByTagName('Width')[0].childNodes[0].nodeValue
                 #weight = dims.getElementsByTagName('Weight')[0].childNodes[0].nodeValue
 
+            
             print 'Dims', height, length, width, weight
             #exit()
+
+            info = { 'title':title,
+                     'height':height,
+                     'length':length,
+                     'width':width,
+                     'weight':weight,
+                     }
 
             images = item.getElementsByTagName('LargeImage')
             if images is not None and len(images) > 0:
                 url = images[0].getElementsByTagName('URL')[0].childNodes[0].nodeValue
 
                 webFile = urlopen(url)
-                localFile = open(url.split('/')[-1], 'w')
+                localFileName = url.split('/')[-1]
+                localFile = open(localFileName, 'w')
                 localFile.write(webFile.read())
                 webFile.close()
                 localFile.close()
-                filenames.append( url.split('/')[-1] )
+                info['filename'] = localFileName
+                info['success'] = True
             else:
+                info['success'] = False
                 print "Couldn't find image for",title
-        return filenames
+            res.append( info )
+        return res
 
     def getData(self,url_params):
         # Sort the URL parameters by key
