@@ -14,7 +14,7 @@ class amzn:
     AWS_ACCESS_KEY_ID = '14YWVZGZ892Z61HAWFR2'
     AWS_SECRET_ACCESS_KEY = 'TT3mOBt9XaxeyeZt7MZSh03/CdaFUbizhOV4MoAq'
 
-    def getItems(self,keywords):
+    def getItems(self,keywords,image_dir='images/'):
         url_params = {'AWSAccessKeyId': self.AWS_ACCESS_KEY_ID, 'Keywords': keywords,
                       'Operation':"ItemSearch", 'SearchIndex': 'Books',
                       'Service':"AWSECommerceService",
@@ -61,7 +61,7 @@ class amzn:
 
                 webFile = urlopen(url)
                 localFileName = url.split('/')[-1]
-                localFile = open(localFileName, 'w')
+                localFile = open(image_dir + localFileName, 'w')
                 localFile.write(webFile.read())
                 webFile.close()
                 localFile.close()
