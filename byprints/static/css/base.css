@@ -1,0 +1,450 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+body
+{
+	background-color: #f6f6f1;
+	url("../images/body-bg.gif") 0 0 repeat;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+#wrapper
+{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Typography */
+/* \\\\\///// */
+
+
+/* Buttons */
+a.button
+{
+	display: inline-block;
+	text-align: center;
+	font-family: "Century Gothic", sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	color: #626257;
+	text-shadow: 0px 1px 0px #fff;
+	border: 1px solid #ababa2;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	cursor: pointer;
+}
+
+a.button.small
+{
+	background: url("../images/27px-button-bg.png") 0 0 repeat-x;
+	height: 22px;
+	padding: 5px 10px 0 10px;
+	font-size: 12px;
+}
+
+a.button.large
+{
+	background: url("../images/46px-button-bg.png") 0 0 repeat-x;
+	height: 36px;
+	padding: 10px 10px 0 10px;
+	font-size: 22px;
+	letter-spacing: 2px;
+}
+
+
+/* A. HEADER STYLES */
+.header-bg
+{
+	position: absolute;
+	height: 55px;
+	width: 100%;
+	background: url("../images/header-bg.png") 0 0 repeat-x;
+	
+}
+
+.header
+{
+	height: 55px;
+	margin: 0 0 20px 0;
+}
+
+.header img.logo
+{
+	display: block;
+	float: left;
+	margin: 10px 0 0 5px;
+}
+
+.header .header-buttons
+{
+	float: right;
+	margin: 12px 5px 0 0;
+}
+
+.header h1
+{
+	font-family: "Century Gothic", sans-serif;
+	font-size: 48px;
+	color: #626257;
+	font-weight: normal;
+	text-shadow: 0px 1px 0px #fff;
+	margin: 10px;
+}
+
+.header h1 span.username
+{
+	color: #bcbcb3;
+	font-size: 30px;
+}
+
+.header h1 span.date
+{
+	font-size: 30px;
+}
+
+
+
+/* /////////////////////// */
+
+/* B. POD STYLES */
+.content .pod
+{
+	float: left;
+	text-shadow: 0px 1px 0px #fff;
+	margin: 10px;
+	height: 340px;
+}
+
+.content .pod h2
+{
+	color: #34342c;
+	font-family: "Century Gothic", sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	border-bottom: 1px solid #bcbcb3;
+}
+
+.content .pod h2 span.color
+{
+	width: 5px;
+	height: 15px;
+	display: inline-block;
+}
+
+.content .pod h2 span.color.flickr{ background-color: #f26c4f; }
+.content .pod h2 span.color.twitter{ background-color: #408dc8; }
+.content .pod h2 span.color.instagram{ background-color: #fdaa4c; }
+
+.content .pod.eight
+{
+	width: 620px;
+}
+
+.content .pod.four
+{
+	width: 300px;
+}
+
+.content .pod.six
+{
+	width: 460px;
+
+}
+/* /////////////////////// */
+
+/* C. CONTENT STYLES */
+/* 1. Micro-blog style posts (twitter, fb status, tumblr post) */
+.micro-post
+{
+	background: url("../images/pull-quote.png") 11px 0 no-repeat;
+	padding: 0 0 0 67px;
+	margin: 20px 0;
+}
+
+.micro-post p
+{
+	font-family: "ITC New Baskerville Std", Georgia, serif;
+	color: #34342c;
+	font-size: 18px;
+	line-height: 24px;
+	padding-right: 30px;
+}
+
+.micro-post cite
+{
+	display: block;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #626257;
+	font-size: 12px;
+	font-style: normal;
+	margin: 5px 0 0 0;
+}
+
+.micro-post a
+{
+	color: #408dc8;
+	text-decoration: none;
+}
+
+/* 2. Photo album style posts (flickr, picassa, facebook albums) */
+.slide-show-photo
+{
+	margin: 10px 0;
+}
+
+.slide-show-photo img
+{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.4);
+	border: 1px solid #ddddd2;
+	box-shadow: 0px 1px 0px #fff;
+	-moz-box-shadow: 0px 1px 0px #fff;
+	-webkit-box-shadow: 0px 1px 0px #fff;
+}
+
+.slide-show h3
+{
+	font-size: 48px;
+	font-family: "ITC New Baskerville Std", Georgia, serif;
+	font-weight: normal;
+	color: #34342c;
+	margin: 10px;
+}
+
+/* 3. Pics (individual photos, instagram, dailybooth, etc) */
+div.pic 
+{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.4);
+	border: 1px solid #ddddd2;
+	box-shadow: 0px 1px 0px #fff;
+	-moz-box-shadow: 0px 1px 0px #fff;
+	-webkit-box-shadow: 0px 1px 0px #fff;
+	margin: 10px 0 0 0;
+}
+
+
+
+/* Timeline Styles */
+.timeline-holder
+{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 42px;
+	width: 100%;
+	background: url("../images/timeline-bg.png") 0 0 repeat-x;
+}
+
+.timeline-holder .timeline
+{
+	position: relative;
+	width: 940px;
+	margin: 1px auto 0;
+	background: rgba(255,255,255,0.2);
+	height: 40px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #a2a29e;
+}
+
+.timeline .day-marker
+{
+	width: 2px;
+	height: 40px;
+	padding: 0 1px 0;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.timeline .day-marker .fill
+{
+	background: #69695b;
+	position: absolute;
+	bottom: 0;
+	width: 2px;
+}
+
+.timeline .current-week-indicator
+{
+	position: absolute;
+	width: 28px;
+	height: 42px;
+	background: url("../images/week-indicator-bg.png") 0 0 no-repeat;
+	top: -1px;
+	left: 200px;
+}
+
+.current-week-indicator .date
+{
+	display: none;
+	width: 120px;
+	margin: -27px 0 0 -50px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "ITC New Baskerville Std", Georgia, serif;
+	font-weight: bold;
+	color: #F1F1EC;
+	text-shadow: 0px 1px 1px #000;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 3px 5px 0px 5px;
+	border-radius: 12px;
+}
+
+.timeline-holder a.previous-button,
+.timeline-holder a.next-button
+{
+	position: absolute;
+	font-family: "Century Gothic", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #8a8a83;
+	width: 375px;
+	height: 30px;
+	padding: 10px 0 0 0;
+	margin-top: 1px;	
+	border-left: 1px solid #fff;
+	border-right: 1px solid #a2a29e;
+	text-shadow: 0px 1px 0px #fff;
+	cursor: pointer;
+	background: rgba(255,255,255,0.2);
+}
+
+.timeline-holder a.next-button
+{
+	margin: -40px 0 0 -1px;
+	right: 0;
+}
+
+.timeline-holder a.previous-button:hover,
+.timeline-holder a.next-button:hover
+{
+	color: #34342c;
+	background: transparent;
+}
+
+/* Desired Week Summary */
+.desired-week-summary
+{
+	position: absolute;
+	width: 225px;
+	height: 160px;
+	top: -160px;
+	background: #e8e2d1;
+	box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+	border: 1px solid #948356;
+	border-radius: 6px;
+}
+
+.desired-week-summary .heading
+{
+	height: 28px;
+	background: #9a673f;
+	color: #e8dfc5;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+	text-align: center;
+	padding: 5px 0 0 0;
+}
+
+.desired-week-summary .stat
+{
+	width: 59px;
+	height: 47px;
+	float: left;
+	font-family: "Century Gothic", sans-serif;
+	text-align: center;
+	padding: 10px 0 0 50px;
+}
+
+.stat.photos{ background: url("../images/icon-photo.png") 10px 10px no-repeat; }
+.stat.updates{ background: url("../images/icon-pull-quote.png") 10px 10px no-repeat; }
+.stat.checkins{ background: url("../images/icon-checkin.png") 10px 10px no-repeat; }
+.stat.songs{ background: url("../images/icon-note.png") 10px 10px no-repeat; }
+
+.stat var
+{
+	display: block;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.9);
+	color: #44433a;
+}
+
+.stat cite
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10px;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.9);
+	color: #8a8575;
+}
+
+/* DEBUG WIDGET */
+.debug-widget
+{
+	position: absolute;
+	width: 200px;
+	padding: 20px;
+	left: 0;
+	top: 10%;
+	background: rgba(0,0,0,0.6);
+	border-radius: 0px 8px 8px 0px;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+	font-family: Arial, sans-serif;
+}
+
+.debug-widget ul
+{
+	list-style: none;
+}
+
+.debug-widget li
+{
+	margin: 5px 0;
+}
+
+.debug-widget a
+{
+	color: #f2f2f2;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px #000;
+}
+
+.debug-widget a:hover
+{
+	color: #F26C4F;
+}

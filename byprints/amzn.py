@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 
 # Dan Goldin
-
 # Based on http://cloudcarpenters.com/blog/amazon_products_api_request_signing/
 
 import base64,hashlib,hmac,time,pprint
 import xml.dom.minidom
 from urllib import urlencode, urlopen
-#from lxml import objectify
 
 class amzn:
     base_url = "http://ecs.amazonaws.com/onca/xml"
